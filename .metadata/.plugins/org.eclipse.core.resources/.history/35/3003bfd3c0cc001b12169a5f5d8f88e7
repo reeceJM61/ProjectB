@@ -1,0 +1,29 @@
+package fixtures;
+
+/*
+ * This class represents a room in the house.
+ */
+
+public class Room extends Fixture {
+	
+	Room[] exits;
+
+	public Room(String name, String shortDescription, String longDescription) {
+		super(name, shortDescription, longDescription);
+		this.exits = new Room[10]; // size is subject to change
+		
+	}
+	
+	public Room[] getExits() {
+		
+		return Room[0];
+		
+	}
+	
+	public Room getExit(String direction) {
+		
+		return ;
+		
+	}
+	
+}

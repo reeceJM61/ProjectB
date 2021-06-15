@@ -1,0 +1,72 @@
+package fixtures;
+
+/*
+ * This class represents a room in the house.
+ */
+
+public class Room extends Fixture {
+	
+	// the rooms adjacent to this one.
+	// size depends on number of exits
+	public Room[] exits = new Room[2]; //{left exit, right exit}
+	
+	public String name;
+	
+	public Room(String name) {
+		this.name = name;
+	}
+
+	public Room(String name, String shortDescription, String longDescription) {
+		super();
+		this.exits = new Room[10]; // size is subject to change
+		
+	}
+	
+//	public Room[] getExits() {
+//		
+//		return null;
+//		
+//	}
+	
+	public Room getLeftExit() {
+		return exits[0];
+	}
+	
+	public Room getRightExit() {
+		return exits[1];
+	}
+	
+	public void setLeftExit(Room exit) {
+		exits[0] = exit;
+	}
+	
+	public void setRightExit(Room exit) {
+		exits[1] = exit;
+	}
+	
+	
+	
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	public void setExits(Room[] exits) {
+//		this.exits = exits;
+//	}
+
+	@Override
+	public String toString() {
+		return "Room [name=" + name + "]";
+	}
+
+	
+	
+	
+	
+	
+}
