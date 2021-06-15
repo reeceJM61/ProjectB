@@ -11,10 +11,10 @@ import fixtures.Room;
 public class RoomManager {
 	
 	Room startingRoom; // the room a player should start in.
+	
 	Room[] allRooms; // all the rooms in the house.
 	
-	
-	public static void init() {
+	public void init() {
 		
 		Room kitchen = new Room("Kitchen");
 		Room livingRoom = new Room("Living Room");

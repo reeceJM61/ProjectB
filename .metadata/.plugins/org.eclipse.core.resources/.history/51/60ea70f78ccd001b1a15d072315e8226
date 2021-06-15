@@ -16,18 +16,16 @@ public class Main {
 	public static void main(String[] args) {
 		//Set up rooms
 		
-		Room kitchen = new Room("Kitchen");
-		Room livingRoom = new Room("Living Room");
-		Room bedRoom = new Room("Bedroom");
-		Room bathRoom = new Room("Bathroom");
+		
 		
 		
 		
 		//Set up player
-	
-		RoomManager.init();
 		
-		Room currentRoom = kitchen; // kitchen
+		RoomManager rm = new RoomManager();
+		rm.init();
+		
+		Room currentRoom = rm.startingRoom; //living room
 		
 		boolean quit = false;
 		while(!quit) {
@@ -41,19 +39,15 @@ public class Main {
 				continue;
 			}
 			Room nextRoom = null;
-			if(input.equals("back")) {
-				nextRoom = currentRoom.getBackExit();
-			} else if (input.equals("left")) {
+			if(input.equals("left")) {
 				nextRoom = currentRoom.getLeftExit();
-			} else if (input.equals("front")) {
-				nextRoom = currentRoom.getFrontExit();
 			} else if (input.equals("right")) {
 				nextRoom = currentRoom.getRightExit();
-			} else System.out.println("Invalid Input");
+			}
 			
 			if(nextRoom != null) {
 				currentRoom = nextRoom;
-			} else System.out.println("You ran into a wall");
+			}
 	
 			
 			

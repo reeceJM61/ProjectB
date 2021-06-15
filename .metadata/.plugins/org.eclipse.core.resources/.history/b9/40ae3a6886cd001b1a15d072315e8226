@@ -8,7 +8,7 @@ public class Room extends Fixture {
 	
 	// the rooms adjacent to this one.
 	// size depends on number of exits
-	public Room[] exits = new Room[4]; //{left exit, right exit, back, front}
+	public Room[] exits = new Room[2]; //{left exit, right exit}
 	
 	public String name;
 	
@@ -18,7 +18,8 @@ public class Room extends Fixture {
 
 	public Room(String name, String shortDescription, String longDescription) {
 		super();
-		this.exits = new Room[4]; // size is subject to change
+		this.exits = new Room[10]; // size is subject to change
+		
 	}
 	
 //	public Room[] getExits() {
@@ -27,36 +28,20 @@ public class Room extends Fixture {
 //		
 //	}
 	
-	public Room getBackExit() {
+	public Room getLeftExit() {
 		return exits[0];
 	}
 	
-	public Room getLeftExit() {
+	public Room getRightExit() {
 		return exits[1];
 	}
 	
-	public Room getRightExit() {
-		return exits[2];
-	}
-	
-	public Room getFrontExit() {
-		return exits[3];
-	}
-	
-	public void setBackExit(Room exit) {
+	public void setLeftExit(Room exit) {
 		exits[0] = exit;
 	}
 	
-	public void setLeftExit(Room exit) {
-		exits[1] = exit;
-	}
-	
-	public void setFrontExit(Room exit) {
-		exits[2] = exit;
-	}
-	
 	public void setRightExit(Room exit) {
-		exits[3] = exit;
+		exits[1] = exit;
 	}
 	
 	

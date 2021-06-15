@@ -11,48 +11,22 @@ import fixtures.Room;
 public class RoomManager {
 	
 	Room startingRoom; // the room a player should start in.
+	
 	Room[] allRooms; // all the rooms in the house.
 	
-	
-	public static void init() {
+	public void init() {
 		
 		Room kitchen = new Room("Kitchen");
 		Room livingRoom = new Room("Living Room");
-		Room bedRoom = new Room("Bedroom");
-		Room bathRoom = new Room("Bathroom");
 		
-		Room[] allRooms = new Room[4];
+		Room[] allRooms = new Room[2];
 		allRooms[0] = kitchen;
 		allRooms[1] = livingRoom;
-		allRooms[2] = bathRoom;
-		allRooms[3] = bedRoom;
 		
-		// bottom right
-		kitchen.setBackExit(null);
-		kitchen.setLeftExit(bathRoom);
-		kitchen.setRightExit(null);
-		kitchen.setFrontExit(livingRoom);
+		livingRoom.setRightExit(livingRoom);
+		kitchen.setRightExit(kitchen);
 		
-		// top right
-		livingRoom.setBackExit(kitchen);
-		livingRoom.setLeftExit(bedRoom);
-		livingRoom.setFrontExit(null);
-		livingRoom.setRightExit(null);
-		
-		// bottom left
-		bathRoom.setBackExit(null);
-		bathRoom.setLeftExit(null);
-		bathRoom.setFrontExit(bedRoom);
-		bathRoom.setRightExit(kitchen);
-		
-		// top left
-		bedRoom.setBackExit(bathRoom);
-		bedRoom.setLeftExit(null);
-		bedRoom.setFrontExit(null);
-		bedRoom.setRightExit(livingRoom);
-		
-		
-		Room startingRoom = kitchen;
+		Room startingRoom = livingRoom;
 	}
 		
 //		Room foyer = new Room(

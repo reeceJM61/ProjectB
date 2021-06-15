@@ -16,10 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		//Set up rooms
 		
-		Room kitchen = new Room("Kitchen");
-		Room livingRoom = new Room("Living Room");
-		Room bedRoom = new Room("Bedroom");
-		Room bathRoom = new Room("Bathroom");
+		
 		
 		
 		
@@ -27,7 +24,7 @@ public class Main {
 	
 		RoomManager.init();
 		
-		Room currentRoom = kitchen; // kitchen
+		Room currentRoom = startingRoom; // kitchen
 		
 		boolean quit = false;
 		while(!quit) {
