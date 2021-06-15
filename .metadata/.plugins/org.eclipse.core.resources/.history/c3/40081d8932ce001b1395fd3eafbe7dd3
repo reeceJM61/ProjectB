@@ -31,7 +31,6 @@ public class Main {
 			
 			String input = scanner.next();
 			if (input.trim().toLowerCase().equals("quit")) { //trim white space, convert to lower case, test equivalency
-				System.out.println("Thank you! Have a nice day.");
 				quit = true;
 				continue;
 			}

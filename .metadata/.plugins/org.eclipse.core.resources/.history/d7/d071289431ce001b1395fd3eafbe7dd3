@@ -38,11 +38,11 @@ public class Room extends Fixture {
 		return exits[1];
 	}
 	
-	public Room getFrontExit() {
+	public Room getRightExit() {
 		return exits[2];
 	}
 	
-	public Room getRightExit() {
+	public Room getFrontExit() {
 		return exits[3];
 	}
 	
