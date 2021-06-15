@@ -26,7 +26,7 @@ public class Main {
 		boolean quit = false;
 		while(!quit) {
 			System.out.println(currentRoom);
-			System.out.println("Where do you want to go? Backwards, left, forward, or right? " +
+			System.out.println("Where do you want to go? Back, left, forward, or right? " +
 			"\nOr do you want to quit?");
 			
 			String input = scanner.next();
@@ -35,11 +35,11 @@ public class Main {
 				continue;
 			}
 			Room nextRoom = null;
-			if(input.trim().toLowerCase().equals("backwards")) {
+			if(input.trim().toLowerCase().equals("back")) {
 				nextRoom = currentRoom.getBackExit();
 			} else if (input.trim().toLowerCase().equals("left")) {
 				nextRoom = currentRoom.getLeftExit();
-			} else if (input.trim().toLowerCase().equals("forward")) {
+			} else if (input.trim().toLowerCase().equals("front")) {
 				nextRoom = currentRoom.getFrontExit();
 			} else if (input.trim().toLowerCase().equals("right")) {
 				nextRoom = currentRoom.getRightExit();

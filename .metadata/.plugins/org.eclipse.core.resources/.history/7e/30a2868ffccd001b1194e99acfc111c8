@@ -6,9 +6,6 @@ package fixtures;
 
 public class Room extends Fixture {
 	
-	//TODO
-	//set up rooms array
-	
 	// the rooms adjacent to this one.
 	// size depends on number of exits
 	public Room[] exits = new Room[4]; //{left exit, right exit, back, front}
