@@ -6,30 +6,21 @@ package fixtures;
 
 public class Room extends Fixture {
 	
-	//TODO
-	//set up rooms array
+	// Example of Encapsulation
+	// Array of type Room
+	private Room[] exits = new Room[4]; // back, left, front, right
 	
-	// the rooms adjacent to this one.
-	// size depends on number of exits
-	public Room[] exits = new Room[4]; //{left exit, right exit, back, front}
-	
-	public String name;
-	
+	//constructors for Room objects
 	public Room(String name) {
 		this.name = name;
 	}
 
 	public Room(String name, String shortDescription, String longDescription) {
 		super();
-		this.exits = new Room[4]; // size is subject to change
+		this.exits = new Room[4];
 	}
 	
-//	public Room[] getExits() {
-//		
-//		return null;
-//		
-//	}
-	
+	//getters for array exits
 	public Room getBackExit() {
 		return exits[0];
 	}
@@ -46,6 +37,7 @@ public class Room extends Fixture {
 		return exits[3];
 	}
 	
+	//setters for array exits
 	public void setBackExit(Room exit) {
 		exits[0] = exit;
 	}
@@ -63,23 +55,9 @@ public class Room extends Fixture {
 	}
 	
 	
-	
-//
-//	public String getName() {
-//		return name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
-//
-//	public void setExits(Room[] exits) {
-//		this.exits = exits;
-//	}
-
 	@Override
 	public String toString() {
-		return "Room [name=" + name + "]";
+		return "Welcome to the " + name + "!";
 	}
 
 	

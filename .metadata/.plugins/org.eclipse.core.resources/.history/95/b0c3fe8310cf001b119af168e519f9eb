@@ -1,0 +1,19 @@
+package game;
+
+/*
+ * This is where the game-loop will go. 
+ * Where we'll display a prompt, collect input, and parse that input
+ */
+
+public class Main {
+	
+	//private static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+	
+		RoomManager.init();
+		RoomManager.runGame();
+		
+	}
+
+}
