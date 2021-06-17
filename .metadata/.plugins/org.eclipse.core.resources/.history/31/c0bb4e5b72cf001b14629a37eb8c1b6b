@@ -37,7 +37,7 @@ public static void run() {
 				nextRoom = currentRoom.getFrontExit();
 			} else if (input.trim().toLowerCase().equals("right")) {
 				nextRoom = currentRoom.getRightExit();
-			} else System.out.println("I'm sorry! Please try again."); //	TODO: Create Exception that handles gibberish
+			} else System.out.println("I'm sorry! Please try again.");
 			
 			if(nextRoom != null) {
 				currentRoom = nextRoom;
