@@ -7,7 +7,8 @@ import fixtures.Room;
 public class Run {
 	
 	/*
-	 * This class is responsible for running the program.
+	 * This is where the game-loop will go. 
+	 * Where we'll display a prompt, collect input, and parse that input
 	 */
 	
 public static void run() {
@@ -17,14 +18,15 @@ public static void run() {
 		boolean quit = false;
 		while(!quit) {
 			System.out.println(currentRoom);
+			System.out.println();
 			System.out.println("Where do you want to go? Backwards, left, forward, or right? " +
-			"\nOr do you want to quit?");
+			"\nOr do you want to quit and return to the main menu?");
 			
 			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(System.in);
 			String input = scanner.next();
 			if (input.trim().toLowerCase().equals("quit")) { //trim white space, convert to lower case, test equivalency
-				System.out.println("Thank you! Have a nice day.");
+				MainMenu.runMainMenu();
 				quit = true;
 				continue;
 			}
@@ -41,7 +43,7 @@ public static void run() {
 			
 			if(nextRoom != null) {
 				currentRoom = nextRoom;
-			} else System.out.println("Wrong way! You ran into a wall.");
+			} else System.out.println("You ran into a wall.");
 			
 		}
 		
