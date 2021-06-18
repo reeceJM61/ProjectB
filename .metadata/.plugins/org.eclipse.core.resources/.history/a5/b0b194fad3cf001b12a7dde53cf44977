@@ -1,0 +1,43 @@
+package game;
+
+import java.util.Scanner;
+
+public class FloorPlan {
+	
+	public static void viewFloorPlan() {
+		
+		boolean quit = false;
+		while(!quit) {
+		
+		System.out.println(" ------------------------------------                  Forward              ");
+		System.out.println("|                  |                 |                                      ");
+		System.out.println("|                  |                 |                    |                 ");
+		System.out.println("|     Bedroom      |   Living Room   |                    |                 ");
+		System.out.println("|                  |                 |                    |                 ");
+		System.out.println("|                  |                 |    Left   <------------------>   Right  ");
+		System.out.println("|------------------------------------|                    |                  ");
+		System.out.println("|                  |                 |                    |                  ");
+		System.out.println("|                  |                 |                    |                  ");
+		System.out.println("|     Bathroom     |    Kitchen      |                                       ");
+		System.out.println("|                  |                 |                Backwards              ");
+		System.out.println("|                  |                 |");
+		System.out.println(" ------------------------------------");
+		
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.next();
+		if (input.trim().toLowerCase().equals("quit")) { //trim white space, convert to lower case, test equivalency
+			MainMenu.runMainMenu();
+			quit = true;
+			continue;
+		} 
+		
+		MainMenu.runMainMenu();
+		
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package game;
+
+public class FloorPlan {
+	
+	public static void viewFloorPlan() {
+		
+		System.out.println(" ------------------------------------                  Forward              ");
+		System.out.println("|                  |                 |                                      ");
+		System.out.println("|                  |                 |                    |                 ");
+		System.out.println("|     Bedroom      |   Living Room   |                    |                 ");
+		System.out.println("|                  |                 |                    |                 ");
+		System.out.println("|                  |                 |    Left   <------------------>   Right  ");
+		System.out.println("|------------------------------------|                    |                  ");
+		System.out.println("|                  |                 |                    |                  ");
+		System.out.println("|                  |                 |                    |                  ");
+		System.out.println("|     Bathroom     |    Kitchen      |                                       ");
+		System.out.println("|                  |                 |                Backwards              ");
+		System.out.println("|                  |                 |");
+		System.out.println(" ------------------------------------");
+		
+		
+	}
+
+}

@@ -6,13 +6,20 @@ package fixtures;
 
 public class Room extends Fixture {
 	
-	// Example of Encapsulation
 	// Array of type Room
 	private Room[] exits = new Room[4]; // back, left, front, right
 	
-	//constructors for Room objects
+	// Default Room constructor
+	public Room() {}
+	
+	// Constructors that takes in a String name
 	public Room(String name) {
 		this.name = name;
+	}
+	
+	public Room(String name, String shortDescription) {
+		this.name = name;
+		this.shortDescription = shortDescription;
 	}
 
 	public Room(String name, String shortDescription, String longDescription) {
@@ -55,14 +62,14 @@ public class Room extends Fixture {
 	}
 	
 	
+	
+	
 	@Override
 	public String toString() {
-		return "Welcome to the " + name + "!";
+		return "" + 
+				"\nWelcome to the " + name + "!" +
+				"\n" +
+				shortDescription;
 	}
-
-	
-	
-	
-	
 	
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;game.ViewFloorPlan.java&apos; to &apos;FloorPlan.java&apos;&#x0D;&#x0A;- Original project: &apos;HomeTour&apos;&#x0D;&#x0A;- Original element: &apos;game.ViewFloorPlan.java&apos;&#x0D;&#x0A;- Renamed element: &apos;game.FloorPlan.java&apos;" description="Rename compilation unit &apos;ViewFloorPlan.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;game{ViewFloorPlan.java" name="FloorPlan.java" references="false" stamp="1623977458516" version="1.0"/>
+</session>
